@@ -1,0 +1,23 @@
+{
+  "name": "pandaplugins/pio-manager",
+  "description": "Panda PIO Manager – centralizovaný správce připojení Panda systému (Integration Operator) pro WordPress.",
+  "type": "wordpress-plugin",
+  "license": "GPL-2.0-or-later",
+  "authors": [
+    {
+      "name": "Panda Plugins",
+      "email": "support@pandaplugins.dev"
+    }
+  ],
+  "require": {
+    "php": ">=8.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Panda\\PIOManager\\": "includes/"
+    }
+  },
+  "extra": {
+    "installer-name": "panda-pio-manager"
+  }
+}

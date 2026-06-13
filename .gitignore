@@ -1,0 +1,14 @@
+/vendor/
+/node_modules/
+
+storage/cache/*
+storage/temp/*
+
+.phpunit.result.cache
+
+coverage/
+
+.idea/
+.vscode/
+
+.DS_Store

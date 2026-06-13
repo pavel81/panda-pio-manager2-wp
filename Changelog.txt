@@ -1,0 +1,60 @@
+changelog.txt
+
+PANDA PIO MANAGER – CHANGELOG
+=============================
+
+Verze: 1.2.0
+Datum: 2025-10-16
+-----------------
+- Přidán cron job server s podporou WP-Cron a externího REST volání.
+- Možnost nastavit interval běhu (hodinově, 2× denně, denně, vlastní).
+- Generování a zobrazení tokenu + callback URL v administraci.
+- Přidán REST endpoint `/wp-json/pio/v1/cron-run` (spouštění cron úloh).
+- REST endpointy nyní podporují HMAC ověřování i URL token.
+- Rozšířena administrace o sekci „Cron job server“.
+- Zlepšen AJAX test připojení, validace vstupů a vizuální odezva.
+- Přidán logovací mechanismus pro běhy cron úloh.
+- Vylepšena kompatibilita s PHP 8.1+ a PSR-4 autoload.
+
+Verze: 1.1.0
+Datum: 2025-10-12
+-----------------
+- Přidáno REST API `/ping` a `/check`.
+- Implementováno HMAC ověřování (App Key / App Secret).
+- Přidán modul Security pro podpis a kontrolu požadavků.
+- Možnost volání REST endpointů z externích aplikací.
+- Zavedena základní struktura pluginu (Admin, Rest, Client, Security).
+- Přidána AJAX funkce „Otestovat připojení“.
+
+Verze: 1.0.0
+Datum: 2025-10-10
+-----------------
+- První veřejná verze pluginu Panda PIO Manager.
+- Základní administrace: API URL, App Key, App Secret.
+- Tlačítko pro test připojení (AJAX).
+- PSR-4 autoload a kompatibilita s Composerem.
+- Základní příprava pro propojení s Panda Bridge / SEO Hub.
+
+=============================
+Autor: Panda Plugins
+Licence: GPLv2 nebo pozdější
+Repozitář: interní vývojový kanál Panda
+
+
+---
+
+🧩 Doporučení pro strukturu pluginu:
+
+panda-pio-manager/
+ ├── includes/
+ │   ├── Admin.php
+ │   ├── Client.php
+ │   ├── Rest.php
+ │   ├── Security.php
+ │   ├── Cron.php
+ │   └── Logger.php
+ ├── readme.txt
+ ├── changelog.txt
+ ├── panda-pio-manager.php
+ └── composer.json
+
